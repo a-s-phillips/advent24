@@ -1,7 +1,6 @@
 package answers
 
 import (
-	//  "fmt"
 	"advent24/cmd/helpers"
 	"log"
 	"slices"
@@ -9,7 +8,7 @@ import (
 	"strings"
 )
 
-var testData = `3   4
+var day1Test = `3   4
 4   3
 2   5
 1   3
@@ -17,13 +16,6 @@ var testData = `3   4
 3   3`
 
 var similarities = make(map[int]int)
-
-func sortAsc(a, b int) int {
-	if a < b {
-		return -1
-	}
-	return 1
-}
 
 func getSimilarity(list []int, num1 int) int {
 	var filteredList []int
@@ -57,8 +49,8 @@ func Day1(input string) Answer {
 
 	sortedCol1 := col1
 	sortedCol2 := col2
-	slices.SortFunc(sortedCol1, sortAsc)
-	slices.SortFunc(sortedCol2, sortAsc)
+	slices.SortFunc(sortedCol1, helpers.SortAsc)
+	slices.SortFunc(sortedCol2, helpers.SortAsc)  
 
 	sum := 0
 	totalSimilarity := 0

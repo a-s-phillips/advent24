@@ -13,7 +13,9 @@ import (
 type Command func(input string) answers.Answer
 
 var commands = map[int]Command{
-  1: answers.Day1,
+	1: answers.Day1,
+	2: answers.Day2,
+	3: answers.Day3,
 }
 
 func main() {

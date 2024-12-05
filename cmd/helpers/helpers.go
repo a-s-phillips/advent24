@@ -29,6 +29,13 @@ func MathMod(x int, n int) int {
 	return int(xf - (nf * math.Floor((xf / nf))))
 }
 
+func SortAsc(a, b int) int {
+	if a < b {
+		return -1
+	}
+	return 1
+}
+
 func SplitAndTrimInput(input string) []string {
 	lines := strings.Split(input, "\n")
 	for len(lines) > 0 && lines[len(lines)-1] == "" {
